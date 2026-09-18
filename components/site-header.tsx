@@ -14,7 +14,7 @@ import { site } from "@/lib/site"
 
 const nav = [
   { href: "#services", label: "Services" },
-  { href: "#why", label: "About" },
+  { href: "#process", label: "Process" },
   { href: "#location", label: "Location" },
   { href: "#contact", label: "Contact" },
 ] as const
@@ -27,7 +27,7 @@ export const SiteHeader = () => {
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-5 md:px-8">
         <a
           href="#top"
-          className="font-display text-sm font-semibold tracking-[0.14em] text-ink"
+          className="font-display py-3 text-sm font-semibold tracking-[0.14em] text-ink"
           aria-label="City Wide Printing Services home"
         >
           CITY WIDE
@@ -38,7 +38,7 @@ export const SiteHeader = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-gray transition-colors duration-200 hover:text-ink"
+              className="py-2 text-sm text-gray transition-colors duration-200 hover:text-ink"
             >
               {item.label}
             </a>
@@ -49,7 +49,7 @@ export const SiteHeader = () => {
           <Button
             asChild
             size="lg"
-            className="hidden rounded-lg bg-blue px-4 font-display text-sm font-semibold text-white hover:bg-blue/90 md:inline-flex"
+            className="hidden min-h-11 rounded-sm bg-blue px-4 font-display text-sm font-semibold text-white hover:bg-blue/90 md:inline-flex"
           >
             <a
               href={site.whatsappUrl}
@@ -57,7 +57,7 @@ export const SiteHeader = () => {
               rel="noopener noreferrer"
               aria-label="WhatsApp your printing requirement"
             >
-              WhatsApp Your Requirement
+              WhatsApp
             </a>
           </Button>
 
@@ -66,7 +66,7 @@ export const SiteHeader = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-ink/15 bg-transparent md:hidden"
+                className="size-11 border-ink/15 bg-transparent md:hidden"
                 aria-label="Open menu"
               >
                 <Menu />
@@ -98,7 +98,7 @@ export const SiteHeader = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="mt-6 h-12 w-full rounded-lg bg-blue font-display font-semibold text-white hover:bg-blue/90"
+                  className="mt-6 h-12 w-full rounded-sm bg-blue font-display font-semibold text-white hover:bg-blue/90"
                 >
                   <a
                     href={site.whatsappUrl}
